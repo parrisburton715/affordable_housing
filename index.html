@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Housing Visualization</title>
+    <!-- Link Chart.js library (make sure to download and include the library in your project) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Optional: CSS styles for your page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .chart-container {
+            width: 45%;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+        }
+        #districtSelect {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Affordable Housing Visualization</h1>
+
+    <!-- Dropdown for selecting districts -->
+    <div class="container">
+        <div class="chart-container">
+            <h2>Number of Affordable Houses by District</h2>
+            <label for="districtSelect">Select District:</label>
+            <select id="districtSelect">
+                <!-- Options will be added dynamically using JavaScript -->
+            </select>
+        </div>
+        <div class="chart-container">
+            <h2>Top 10 Districts with Affordable Houses</h2>
+            <canvas id="barChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Histogram -->
+    <div class="container">
+        <div class="chart-container">
+            <h2>Affordable Houses per ZIP Code</h2>
+            <canvas id="histogram"></canvas>
+        </div>
+    </div>
+
+    <!-- JavaScript for loading data and generating visualizations -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
