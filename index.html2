@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Council Districts Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+        .legend {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+            max-width: 500px; /* increased width to 300px */
+            padding: 10px;
+            position: absolute;
+            right: 70px;
+            bottom: 20px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .legend h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .legend ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .legend li {
+            margin-bottom: 0;
+            flex: 1;
+        }
+
+        .legend span {
+            display: inline-block;
+            height: 12px;
+            width: 70px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([30.2672, -97.7431], 11);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Council district data
+        var councilDistricts = [
+            { district: '1', lat: 30.288871, long: -97.683747, medianIncome: 72508 },
+            { district: '2', lat: 30.172978, long: -97.733335, medianIncome: 68471 },
+            { district: '3', lat: 30.248550, long: -97.711570, medianIncome: 62415 },
+            { district: '4', lat: 30.308550, long: -97.741570, medianIncome: 52797 },
+            { district: '5', lat: 30.268550, long: -97.731570, medianIncome: 86223 },
+            { district: '6', lat: 30.228550, long: -97.721570, medianIncome: 93649 },
+            { district: '7', lat: 30.198550, long: -97.711570, medianIncome: 81132 },
+            { district: '8', lat: 30.168550, long: -97.701570, medianIncome: 118336 },
+            { district: '9', lat: 30.138550, long: -97.691570, medianIncome: 81220 },
+            { district: '10', lat: 30.108550, long: -97.681570, medianIncome: 102303 }
+        ];
+
+        // Define the color palette
+        var colors = {
+            "50-59k": "#FFA500", // orange
+            "60-69k": "#800080", // purple
+            "70-79k": "#008000", // green
+            "80-89k": "#0000FF", // blue
+            "90-99k": "#FFFF00", // yellow
+            "100k+": "#006400"   // dark green
+        };
+
+        // Loop through the council districts and create a marker for each
+        councilDistricts.forEach(function(district) {
+            let color;
+            if (district.medianIncome >= 100000) {
+                color = colors["100k+"];
+            } else if (district.medianIncome >= 90000) {
+                color = colors["90-99k"];
+            } else if (district.medianIncome >= 80000) {
+                color = colors["80-89k"];
+            } else if (district.medianIncome >= 70000) {
+                color = colors["70-79k"];
+            } else if (district.medianIncome >= 60000) {
+                color = colors["60-69k"];
+            } else if (district.medianIncome >= 50000) {
+                color = colors["50-59k"];
+            } else {
+                color = "#CCCCCC"; // default color
+            }
+
+            let marker = L.marker([district.lat, district.long], {
+                title: `Council District ${district.district}`,
+                icon: L.divIcon({
+                    className: 'custom-marker',
+                    html: `<div style="background-color: ${color}; width: 20px; height: 20px; border-radius: 50%;"></div>`,
+                    iconSize: [20, 20]
+                })
+            }).addTo(map);
+
+            // Create a popup content string using the district data
+            let popupContent = `
+                <b>Council District ${district.district}</b><br>
+                Median Household Income: $${district.medianIncome.toLocaleString()}
+            `;
+
+            // Bind the popup to the marker
+            marker.bindPopup(popupContent);
+        });
+
+        // Create a legend control
+        var legend = L.control({ position: 'bottomright' });
+
+        // Define the legend content
+        legend.onAdd = function(map) {
+            var div = L.DomUtil.create('div', 'legend');
+            div.innerHTML +=
+                '<h4>Salary Range</h4>' +
+                '<ul>' +
+                '<li><span style="background-color: #FFA500;"></span> $50k - $59,999</li>' +
+                '<li><span style="background-color: #800080;"></span> $60k - $69,999</li>' +
+                '<li><span style="background-color: #008000;"></span> $70k - $79,999</li>' +
+                '<li><span style="background-color: #0000FF;"></span> $80k - $89,999</li>' +
+                '<li><span style="background-color: #FFFF00;"></span> $90k - $99,999</li>' +
+                '<li><span style="background-color: #006400;"></span> $100k+</li>' +
+                '</ul>';
+            return div;
+        };
+
+        // Add the legend to the map
+        legend.addTo(map);
+    </script>
+</body>
+</html>
+
+
+
+
+NEW
+
+
+
+
+
+
+
+
