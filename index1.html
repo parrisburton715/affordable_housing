@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown Events</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>Austin Household Income</h2>
+    <p>by District</p>
+    <select id="selDataset">
+        <option value="District1">District 1</option>
+        <option value="District2">District 2</option>
+        <option value="District3">District 3</option>
+        <option value="District4">District 4</option>
+        <option value="District5">District 5</option>
+        <option value="District6">District 6</option>
+        <option value="District7">District 7</option>
+        <option value="District8">District 8</option>
+        <option value="District9">District 9</option>
+        <option value="District10">District 10</option>
+    </select>
+
+    <div id="pie"></div>
+
+    <script>
+        // Function to fetch data from API and build metadata
+        function buildMetadata() {
+            // Fetch data from API
+            d3.json("https://data.austintexas.gov/resource/puux-7swp.json").then((data) => {
+                console.log(data); // Check console for data structure
+                
+                // Example: Assuming 'data' contains the JSON response
+                // Extracting data example (modify as per your data structure)
+                let districtNumbers = [
+                    parseFloat(data[0].hh_income_less_than_10000),
+                    parseFloat(data[0].hh_income_10000_to_14999),
+                    parseFloat(data[0].hh_income_15000_to_24999),
+                    parseFloat(data[0].hh_income_25000_to_34999),
+                    parseFloat(data[0].hh_income_35000_to_49999),
+                    parseFloat(data[0].hh_income_50000_to_74999),
+                    parseFloat(data[0].hh_income_75000_to_99999),
+                    parseFloat(data[0].hh_income_100000_to_149999),
+                    parseFloat(data[0].hh_income_150000_to_199999),
+                    parseFloat(data[0].hh_income_200000_or_more)
+                    // Extract more data fields as needed
+                ];
+
+                let categoryLabels = [
+                    "Less than $10K",
+                    "$10K - $14,999",
+                    "$15K - $24,999",
+                    "$25K - $34,999",
+                    "$35K - $49,999",
+                    "$50K - $74,999",
+                    "$75K - $99,999",
+                    "$100K - $149,999",
+                    "$150K - $199,999",
+                    "More than $200K"
+                    // Add more labels as needed based on your data
+                ];
+
+                // Display the default plot
+                init(districtNumbers, categoryLabels);
+            }).catch((error) => {
+                console.log("Error fetching data:", error);
+            });
+        }
+
+        // Function to initialize the plot
+        function init(values, labels) {
+            // Default trace for the pie chart
+            let trace = {
+                values: values,
+                labels: labels,
+                type: 'pie',
+                sort: false  // Disable sorting if not needed
+            };
+
+            // Data Array
+            let data = [trace];
+
+            // Layout object
+            let layout = {
+                height: 600,
+                width: 800,
+                title: 'Austin Household Income Distribution'  // Chart title
+            };
+
+            // Render the plot to the div tag with id "pie"
+            Plotly.newPlot("pie", data, layout);
+        }
+
+        // Initialize the metadata function
+        buildMetadata();
+
+        // Function called by DOM changes (dropdown menu)
+        function getData() {
+            // Use D3 to select the dropdown menu
+            let dropdownMenu = d3.select("#selDataset");
+
+            // Assign the value of the dropdown menu option to a variable
+            let dataset = dropdownMenu.property("value");
+
+            // Placeholder logic for updating based on dataset selected
+            // This should be replaced with actual data fetching and update logic
+            let newdata = []; // Placeholder for updated data
+
+            if (dataset === "District1") {
+                newdata = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]; 
+            } else if (dataset === "District2") {
+                newdata = [20, 30, 40, 50, 60, 70, 80, 90, 100, 110]; 
+            } else if (dataset === "District3") {
+                newdata = [30, 40, 50, 60, 70, 80, 90, 100, 110, 120]; 
+            } else if (dataset === "District4") {
+                newdata = [40, 50, 60, 70, 80, 90, 100, 110, 120, 130]; 
+            } else if (dataset === "District5") {
+                newdata = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140]; 
+            } else if (dataset === "District6") {
+                newdata = [60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+            } else if (dataset === "District7") {
+                newdata = [70, 80, 90, 100, 110, 120, 130, 140, 150, 160]; 
+            } else if (dataset === "District8") {
+                newdata = [80, 90, 100, 110, 120, 130, 140, 150, 160, 170]; 
+            } else if (dataset === "District9") {
+                newdata = [90, 100, 110, 120, 130, 140, 150, 160, 170, 180]; 
+            } else if (dataset === "District10") {
+                newdata = [100, 110, 120, 130, 140, 150, 160, 170, 180, 190];
+            }
+
+            // Call function to update the chart
+            updatePlotly(newdata);
+        }
+
+        // Update the restyled plot's values
+        function updatePlotly(newdata) {
+            Plotly.restyle("pie", "values", [newdata]);
+        }
+
+        // Event listener for dropdown menu change
+        d3.select("#selDataset").on("change", getData);
+    </script>
+</body>
+</html>
