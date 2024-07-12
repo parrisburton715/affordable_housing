@@ -9,22 +9,21 @@ In conducting this project, several ethical considerations were made to ensure r
 # Software/Libraries/Tools
 Leaflet, PostgreSQL, ERD, Python, VS Code, Austin API, Seaborn, Jupyter Notebook
 
-# Results
-The following files include the final results after data cleaning was finished: District_Starter file, AHI file, and Reduced_Council_Demo.csv
+# Results & Visualizations
+After running our analyses, the following results were found:
+  There are more affordable housing options in districts that serve more minorities; whereas in Districts 6-10, there are less affordable housing options where there is a majority white population
+  Median household income in districts 8 and 10 range between roughly $90K-$120K
+  In Districts 1-4, it averages $55K-$75K for median household income
+
 ![image](https://github.com/user-attachments/assets/8884baa6-dd1e-4686-8f71-208d8bebe6cc)
 ![image](https://github.com/user-attachments/assets/b7c4e340-f543-4fa8-b40e-14aafe2ed80d)
 ![Screen Shot 2024-07-11 at 7 29 34 PM](https://github.com/user-attachments/assets/9415537a-b493-4d40-8934-9dc9fe7838ca)
+![image](https://github.com/user-attachments/assets/58ee03ef-345c-4046-a010-3dfb2039aa58)
+![image](https://github.com/user-attachments/assets/0de41243-f4e6-48d6-b4ac-0d09bac63858)
 
-
-
-# Visualizations
-Bar chart #1 median family income per district and average closing rent
-**possible median home sale price per district**
-Bar chart #2 number of affordable housing properties in each district 
-Histogram showing the demographics of each district
 
 # Resources
-District_Starter, reduced_council_demo.csv, AHI, GitHub Visualization Webpage, ERD,
+District_Starter, reduced_council_demo.csv, AHI, GitHub Visualization Webpage, ERD, Reduced_Council_Demo.csv
 ![image](https://github.com/user-attachments/assets/c9b81fc1-6e3b-4efb-9c08-1055c2be3097)
 
 # Contributors
