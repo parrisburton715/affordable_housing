@@ -20,7 +20,7 @@ After running our analyses, the following results were found:
 
 ![image](https://github.com/user-attachments/assets/8884baa6-dd1e-4686-8f71-208d8bebe6cc)
 ![image](https://github.com/user-attachments/assets/b7c4e340-f543-4fa8-b40e-14aafe2ed80d)
-![Screen Shot 2024-07-11 at 7 29 34 PM](https://github.com/user-attachments/assets/9415537a-b493-4d40-8934-9dc9fe7838ca)
+![Screen Shot 2024-07-11 at 7 42 12 PM](https://github.com/user-attachments/assets/f8ea4ab8-526c-4921-bedb-6b26cc58a2ee)
 ![image](https://github.com/user-attachments/assets/58ee03ef-345c-4046-a010-3dfb2039aa58)
 ![image](https://github.com/user-attachments/assets/0de41243-f4e6-48d6-b4ac-0d09bac63858)
 ![image](https://github.com/user-attachments/assets/8dec88cf-355a-4416-86eb-091d2b5dc9ae)
