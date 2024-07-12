@@ -1,13 +1,16 @@
 # Project 3 Affordable Housing Options By Austin Council District
 
 # Background
-Review Affordable Housing options within the 10 Austin council districts to answer the following questions: 1) How does affordable housing options differ via district?; 2) Whare are the demographics of the residents in each district and theri household income?; 3) What is the average rental and/or housing price per district? The purpose is to locate how the districts are equitably (if at all) dividing up their affordable housing opportunities among the districts after reveiwing for racial/ethnic background, median housing and rental pricing, and median family income. We hope to propose our findings to the Austin Council to provide more affordable options equitably and equally among their districts. 
+Review Affordable Housing options within the 10 Austin council districts to answer the following questions: 1) How does affordable housing options differ via district?; 2) Whare are the demographics of the residents in each district and theri household income?; 3) What is the average rental and/or housing price per district? The purpose is to locate how the districts are equitably (if at all) dividing up their affordable housing opportunities among the districts after reveiwing for racial/ethnic background, median housing pricing, and median family income. We hope to propose our findings to the Austin Council to provide more affordable options equitably and equally among their districts. 
 
 # Ethical Considerations
 In conducting this project, several ethical considerations were made to ensure responsible data use and analysis. The data used is from 2023 and includes census data and affordable housing information provided by the City of Austin. While census data is comprehensive, it may not include all qualified individuals. We ensured the data was clean and accurate by removing any excess columns and verifying the information before analysis. Personal addresses were initially included in the Affordable Housing Inventory (AHI) file. To protect individuals' privacy, these addresses were scrubbed to ensure anonymity in our final files. This step was crucial to prevent any potential misuse of sensitive information. Efforts were made to ensure that our analysis fairly represents all demographics within each district. This includes considering racial/ethnic backgrounds, median family income, and housing prices to provide a comprehensive and unbiased overview of affordable housing distribution. We maintain transparency in our methodology and processes, providing clear documentation and instructions for replicating the analysis. Our goal is to be accountable to the communities affected by our findings and to the Austin Council, to whom we will propose our recommendations for more equitable housing options.
 
 # Software/Libraries/Tools
 Leaflet, PostgreSQL, ERD, Python, VS Code, Austin API, Seaborn, Jupyter Notebook
+
+# Instructions on how to use and interact with the project
+Once downloaded, there is an interactive map and bar charts. Users can hover over items on the map to retrive the median household income in the specific district. For both bar charts, users can hover over each designated bar to review the corresponding number of affordable houses by zip code in the pink chart and the number of affordable houses by district. 
 
 # Results & Visualizations
 After running our analyses, the following results were found:
