@@ -10,7 +10,12 @@ In conducting this project, several ethical considerations were made to ensure r
 Leaflet, PostgreSQL, ERD, Python, VS Code, Austin API, Seaborn, Jupyter Notebook
 
 # Results
-The following files include the final results after data cleaning was finsihed: District_Starter file, AHI file, and Reduced_Council_Demo.csv:
+The following files include the final results after data cleaning was finished: District_Starter file, AHI file, and Reduced_Council_Demo.csv
+![image](https://github.com/user-attachments/assets/8884baa6-dd1e-4686-8f71-208d8bebe6cc)
+![image](https://github.com/user-attachments/assets/b7c4e340-f543-4fa8-b40e-14aafe2ed80d)
+![Screen Shot 2024-07-11 at 7 29 34 PM](https://github.com/user-attachments/assets/9415537a-b493-4d40-8934-9dc9fe7838ca)
+
+
 
 # Visualizations
 Bar chart #1 median family income per district and average closing rent
