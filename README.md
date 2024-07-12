@@ -19,8 +19,11 @@ Bar chart #2 number of affordable housing properties in each district
 Histogram showing the demographics of each district
 
 # Resources
-District_Starter, reduced_council_demo.csv, AHI, ERD, 
+District_Starter, reduced_council_demo.csv, AHI, GitHub Visualization Webpage, ERD,
+![image](https://github.com/user-attachments/assets/c9b81fc1-6e3b-4efb-9c08-1055c2be3097)
 
 # Contributors
 Demographic data: https://data.austintexas.gov/City-Government/2023-Austin-Council-District-Demographic-Data/puux-7swp/about_data; Affordable Housing data: https://data.austintexas.gov/Housing-and-Real-Estate/Affordable-Housing-Inventory/ifzc-3xz8/about_data;
+
+
 
