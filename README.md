@@ -30,6 +30,17 @@ After running our analyses, the following results were found:
 ![image](https://github.com/user-attachments/assets/f996d44c-7a31-483f-985d-66ae69c58d15)
 ![image](https://github.com/user-attachments/assets/19282a61-d660-409e-8b68-bbe951e9a5e7)
 
+# Future Considerations
+Revisit the Austin Incentive Program to increase options in more affluent communities to allow for affordable housing options
+Evaluate existing housing policies and their effectiveness in promoting equity
+   Housing trust funds by the City to include more stability for development and maintenence of affordable housing
+   Density bonuses--regulatory tool that provides developers and real estate land grants in exchange for providing public benefits
+Continued monitoring of established frameworks for continued affordable housing programs
+   Low-Oncome Housing Tax Credits
+   Rent Control & Stabilization
+   New Market Tax Credits
+   Inclusionary Zoning practices
+
 # Resources
 District_Starter, reduced_council_demo.csv, AHI, GitHub Visualization Webpage, ERD, Reduced_Council_Demo.csv
 ![image](https://github.com/user-attachments/assets/c9b81fc1-6e3b-4efb-9c08-1055c2be3097)
