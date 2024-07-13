@@ -27,7 +27,8 @@ After running our analyses, the following results were found:
 ![image](https://github.com/user-attachments/assets/58ee03ef-345c-4046-a010-3dfb2039aa58)
 ![image](https://github.com/user-attachments/assets/0de41243-f4e6-48d6-b4ac-0d09bac63858)
 ![image](https://github.com/user-attachments/assets/8dec88cf-355a-4416-86eb-091d2b5dc9ae)
-
+![image](https://github.com/user-attachments/assets/f996d44c-7a31-483f-985d-66ae69c58d15)
+![image](https://github.com/user-attachments/assets/19282a61-d660-409e-8b68-bbe951e9a5e7)
 
 # Resources
 District_Starter, reduced_council_demo.csv, AHI, GitHub Visualization Webpage, ERD, Reduced_Council_Demo.csv
